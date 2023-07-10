@@ -1,8 +1,9 @@
-import React, { ReactNode, useEffect, useState, useCallback, useRef } from 'react';
+import React, { ReactNode, useEffect, useState, useRef } from 'react';
 import classNames from 'classnames';
 
 import { InfoCard } from '../InfoCard';
 import { Text, TextTypes, Title } from '../../design-system/Typography';
+import { getPublicURL } from '../../../helpers/getPublicURL';
 
 import styles from './DropdownText.module.scss';
 
@@ -54,7 +55,7 @@ export const DropdownText: React.FC<Props> = ({ title, description, className })
           <img
             className={styles.cross}
             alt="toggle faq item"
-            src="/images/design-system/cross.svg"
+            src={getPublicURL('/images/design-system/cross.svg')}
           />
         </div>
         <div

@@ -1,3 +1,4 @@
+import { getPublicURL } from '../../../helpers/getPublicURL';
 import {
   Text,
 } from '../../design-system/Typography';
@@ -19,22 +20,10 @@ export const Footer: React.FC = () => {
         <Suggestion className={styles.suggestion} />
       </div>
       <div className={styles.paymentMethods}>
-        <img
-          alt="visa"
-          src="/images/payment-methods/visa.svg"
-        />
-        <img
-          alt=""
-          src="/images/payment-methods/master-card.yellow.svg"
-        />
-        <img
-          alt=""
-          src="/images/payment-methods/master-card.blue.svg"
-        />
-        <img
-          alt=""
-          src="/images/payment-methods/mir.svg"
-        />
+        <img src={getPublicURL('/images/payment-methods/visa.svg')} />
+        <img src={getPublicURL('/images/payment-methods/master-card.yellow.svg')} />
+        <img src={getPublicURL('/images/payment-methods/master-card.blue.svg')} />
+        <img src={getPublicURL('/images/payment-methods/mir.svg')} />
       </div>
     </div>
   );

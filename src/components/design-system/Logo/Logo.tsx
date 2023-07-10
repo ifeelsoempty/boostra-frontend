@@ -1,3 +1,5 @@
+import { getPublicURL } from '../../../helpers/getPublicURL';
+
 import styles from './Logo.module.scss';
 
 export const Logo: React.FC = () => {
@@ -6,7 +8,7 @@ export const Logo: React.FC = () => {
       <img
         className={styles.image}
         alt="Logo"
-        src="/images/boostra-logo.dark.png"
+        src={getPublicURL('/images/boostra-logo.dark.png')}
       />
     </div>
   );

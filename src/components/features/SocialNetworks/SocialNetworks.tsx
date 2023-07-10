@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { getPublicURL } from '../../../helpers/getPublicURL';
 
 import styles from './SocialNetworks.module.scss';
 
@@ -9,22 +10,22 @@ interface Props {
 const SOCIAL_NETWORKS_LINKS = [
   {
     name: 'telegram',
-    imageUrl: '/images/social-networks/telegram.png',
+    imageUrl: getPublicURL('/images/social-networks/telegram.png'),
     url: 'https://telegram.me/boostra_bot',
   },
   {
     name: 'viber',
-    imageUrl: '/images/social-networks/viber.png',
+    imageUrl: getPublicURL('/images/social-networks/viber.png'),
     url: 'https://watbot.ru/w/mjj',
   },
   {
     name: 'vk',
-    imageUrl: '/images/social-networks/vk.png',
+    imageUrl: getPublicURL('/images/social-networks/vk.png'),
     url: 'https://vk.me/boostra_zaim',
   },
   {
     name: 'whatsapp',
-    imageUrl: '/images/social-networks/whatsapp.png',
+    imageUrl: getPublicURL('/images/social-networks/whatsapp.png'),
     url: 'https://watbot.ru/w/mji',
   },
 ];

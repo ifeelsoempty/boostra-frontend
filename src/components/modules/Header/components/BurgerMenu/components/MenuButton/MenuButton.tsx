@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 
+import { getPublicURL } from '../../../../../../../helpers/getPublicURL';
+
 import styles from './MenuButton.module.scss';
 
 interface Props {
@@ -13,7 +15,7 @@ export const MenuButton: React.FC<Props> = ({ className, onClick, active }) => {
     <div className={classNames(styles.container, className)}>
       <img
         onClick={onClick}
-        src={`/images/burger-menu/${active ? 'closed' : 'opened'}.svg`}
+        src={getPublicURL(`/images/burger-menu/${active ? 'closed' : 'opened'}.svg`)}
       />
     </div>
   );

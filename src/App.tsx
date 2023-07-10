@@ -9,7 +9,7 @@ import styles from './App.module.scss';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/boostra-frontend">
       <Header />
       <div className={styles.content}>
         <Routes>
@@ -17,14 +17,10 @@ const App: React.FC = () => {
             path={BaseRoutes.Main}
             element={<Main />}
           />
-        </Routes>
-        <Routes>
           <Route
             path={BaseRoutes.Partners}
             element={<Main />}
           />
-        </Routes>
-        <Routes>
           <Route
             path={BaseRoutes.Info}
             element={<Main />}

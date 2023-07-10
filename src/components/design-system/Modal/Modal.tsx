@@ -1,12 +1,14 @@
-import ReactModal, { Props as ReactModalProps } from 'react-modal';
-import styles from './Modal.module.scss';
-import { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren } from 'react';
 import classNames from 'classnames';
+import ReactModal, { Props as ReactModalProps } from 'react-modal';
+
+import { getPublicURL } from '../../../helpers/getPublicURL';
+
+import styles from './Modal.module.scss';
 
 type Props = {
   className?: string;
 } & ReactModalProps;
-
 
 export const Modal: React.FC<PropsWithChildren<Props>> = (props) => {
   const { children, className, isOpen } = props;
@@ -28,7 +30,7 @@ export const Modal: React.FC<PropsWithChildren<Props>> = (props) => {
         <img
           className={styles.closeButton}
           onClick={props.onRequestClose}
-          src="/images/modal/close.svg"
+          src={getPublicURL('/images/modal/close.svg')}
         />
       </div>
     </ReactModal>
