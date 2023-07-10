@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/boostra-frontend/static/css/main.a9492d78.css",
+    "main.js": "/boostra-frontend/static/js/main.a319764a.js",
+    "index.html": "/boostra-frontend/index.html",
+    "main.a9492d78.css.map": "/boostra-frontend/static/css/main.a9492d78.css.map",
+    "main.a319764a.js.map": "/boostra-frontend/static/js/main.a319764a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9492d78.css",
+    "static/js/main.a319764a.js"
+  ]
+}
