@@ -1,0 +1,60 @@
+@import '../../../styles/typography.variables.scss';
+@import '../../../styles/palette.variables.scss';
+@import '../../../styles/layout.variables.scss';
+
+.container {
+    display: flex;
+    flex: none;
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 4px 14px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background: transparent;
+    transition: color .1s linear, background-color .15s linear;
+    font-size: $font-size-1;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// TYPES
+
+.primary, .primary:focus {
+    color: white;
+    background-color: $secondary-1;
+    &:hover {
+        background-color: $secondary-2;
+    }
+}
+
+.outline {
+    border: 2px solid $secondary-1;
+    color: $secondary-1;
+    &:hover {
+        background-color: $secondary-1;
+        color: white;
+    }
+}
+
+.orange, .orange:focus {
+    background-color: $primary-1;
+    color: $white-1;
+    &:hover {
+        border: 2px solid $primary-1;
+        background-color: transparent;
+        color: $primary-1;
+    }
+} 
+
+// SIZES
+
+.large {
+    padding: 17px;
+    width: 100%;
+    font-weight: 600;
+}

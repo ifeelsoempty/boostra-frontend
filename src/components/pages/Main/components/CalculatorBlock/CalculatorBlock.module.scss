@@ -1,0 +1,110 @@
+@import '../../../../../styles/palette.variables.scss';
+@import '../../../../../styles/typography.variables.scss';
+@import '../../../../../styles/layout.variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    .titleBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+
+        .moneyReceiving {
+            background: $primary-1;
+            margin-top: 10px;
+
+            color: $white-2;
+            font-weight: bold;
+            font-size: $font-size-4;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            text-align: start;
+        }
+    }
+
+    .socialNetworks {   
+        @media (max-width: $breakpoint-tablet) {
+            display: none;
+        }
+    }
+    @media (max-width: $breakpoint-tablet) {
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+.body {
+    display: flex;
+    align-items: flex-start;
+    gap: 200px;
+
+    @media (max-width: $breakpoint-laptop) {
+        margin-top: 25px;
+    }
+
+    @media (max-width: $breakpoint-laptop) {
+        $gap: 50px;
+        gap: $gap;
+
+        .image {
+            @media (max-width: $breakpoint-laptop) {
+                max-width: calc(50% - $gap/2);
+            }
+        }
+        justify-content: space-between;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        flex-direction: column-reverse;
+        gap: 25px;
+        align-items: center;
+    }
+}
+
+.footer {
+    // TODO: Вынести в ссылку
+    margin-top: 10px;
+    .link {
+        text-decoration: underline;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        text-align: center;
+    }
+}
+
+.calculator {
+    margin-top: 25px;
+
+    @media (max-width: $breakpoint-laptop) {
+        margin-top: 0;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+    }
+}
+
+.image {
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.headerImage {
+    display: none;
+    max-width: 50%;
+    @media (max-width: $breakpoint-tablet) {
+        display: block;
+    }
+}

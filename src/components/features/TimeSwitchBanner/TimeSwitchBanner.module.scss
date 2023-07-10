@@ -1,0 +1,30 @@
+@import '../../../styles/layout.variables.scss';
+@import '../../../styles/typography.variables.scss';
+@import '../../../styles/palette.variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.banner {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    padding: 9px 0;
+    border-radius: 32px;
+    background: $white-1;
+}
+
+.bannerText, .bannerText span {
+    font-weight: bold;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    gap: 4px;
+}

@@ -1,0 +1,23 @@
+@import '../../../styles/layout.variables.scss';
+@import '../../../styles/palette.variables.scss';
+
+.container {
+    display: flex;
+    background: $white-1;
+}
+
+.default {
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.small {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

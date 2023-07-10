@@ -1,0 +1,53 @@
+@import '../../../styles/typography.variables.scss';
+@import '../../../styles/palette.variables.scss';
+
+.container {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemValue {
+    background: #F9F9F9;
+    font-weight: bold;
+}
+
+.thumb {
+    width: 15px;
+    height: 15px;
+    background: #198754;
+    border-radius: 100px;
+    outline: 5px solid rgba(25, 135, 84, .5);
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-top: 9px;
+    padding: 12.5px 0;
+}
+
+.valueNavigation {
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-4;
+    margin-top: 5px;
+}
+
+:global(.track) {
+    height: 3px;
+    border-radius: 1.5px;
+}
+
+:global(.track-1) {
+    background: #DBDBDB;
+}
+
+:global(.track-0) {
+    background: #198754;
+}

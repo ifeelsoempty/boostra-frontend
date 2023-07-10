@@ -1,0 +1,25 @@
+@import '../../../styles/layout.variables.scss';
+@import '../../../styles/palette.variables.scss';
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.number:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.title:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.description:not(:last-child) {
+    margin-bottom: 20px;
+}

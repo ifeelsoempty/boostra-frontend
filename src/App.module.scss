@@ -1,0 +1,11 @@
+@import './styles/palette.variables';
+@import './styles/layout.variables.scss';
+
+.content {
+    background-color: $white-2;
+    padding: 20px 0 80px 0;
+
+    @media (max-width: $breakpoint-laptop) { 
+        padding: 10px 0 50px 0;
+    }
+}

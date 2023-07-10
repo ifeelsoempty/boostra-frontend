@@ -1,0 +1,96 @@
+$positionTop: 50%;
+$slideFromPositionTop: -50%;
+$overlayBackground: rgba(0, 0, 0, 0.7);
+$animationDuration: .2s;
+
+.bodyOpenClassName {
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: $positionTop;
+
+    padding: 20px;
+    margin-right: -50%;
+    min-width: 320px;
+
+    transform: translate(-50%, -50%);
+    
+    outline: none;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+
+    animation: $animationDuration slideIn;
+}
+
+.container.closing {
+    animation: $animationDuration slideOut;
+    top: -50%;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0px;
+    background-color: $overlayBackground;
+    z-index: 999;
+
+    animation: $animationDuration opacifyBackground;
+}
+
+.overlay.closing {
+    animation: $animationDuration transparentifyBackground;
+    background: transparent
+}
+
+.content {
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        top: $slideFromPositionTop;
+    }
+    100% {
+        top: $positionTop;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        top: $positionTop;
+    }
+    100% {
+        top: $slideFromPositionTop;
+    }
+}
+
+@keyframes opacifyBackground {
+    0% {
+        background: transparent;
+    }
+    100% {
+        background: $overlayBackground;
+    }
+}
+
+@keyframes transparentifyBackground {
+    0% {
+        background: $overlayBackground;
+    }
+    100% {
+        background: transparent;
+    }
+}

@@ -1,0 +1,13 @@
+@import '../../../../styles/typography.variables.scss';
+@import '../../../../styles/palette.variables.scss';
+
+/* Types */
+
+.primary {
+    color: $primary-1;
+}
+
+.caption {
+    color: $font-color-2;
+    font-size: $font-size-1;
+}

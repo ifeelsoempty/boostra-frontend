@@ -1,0 +1,27 @@
+@import '../../../styles/palette.variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.conditions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.registrationModal {
+    width: 320px;
+}

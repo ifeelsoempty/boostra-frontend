@@ -1,0 +1,210 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "space-infix-ops": ["error", { "int32Hint": false }]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": ["@typescript-eslint", "react", "react-hooks"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "rules": {
+        // JavaScript
+        "strict": "off",
+        "curly": ["error", "all"],
+        "brace-style": ["error", "stroustrup"],
+        "object-curly-spacing": ["error", "always"],
+        "no-else-return": "error",
+        "dot-notation": "error",
+        "prefer-template": "error",
+        "no-multi-spaces": [
+          "error",
+          {
+            "exceptions": { "VariableDeclarator": true, "Property": true },
+            "ignoreEOLComments": true
+          }
+        ],
+        "key-spacing": ["error", { "beforeColon": false, "mode": "minimum" }],
+        "comma-dangle": ["error", "always-multiline"],
+        "func-call-spacing": "error",
+        "arrow-spacing": "error",
+        "padded-blocks": ["error", "never"],
+        "object-shorthand": "error",
+        "no-restricted-imports": ["error", { "paths": ["axios"] }],
+        "global-require": "error",
+        "import/no-named-as-default": "off",
+        "import/named": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-unused-expressions": "off",
+        "no-console": ["warn", { "allow": ["warn", "error"] }],
+        "no-debugger": "warn",
+        "no-alert": "warn",
+        "no-underscore-dangle": "off",
+        "no-bitwise": "off",
+        "no-restricted-globals": ["error", "event", "fdescribe"],
+        "jsx-quotes": "warn",
+        "no-tabs": "warn",
+        "no-trailing-spaces": "warn",
+        "no-unneeded-ternary": "error",
+        "quotes": ["warn", "single", { "avoidEscape": true }],
+        "semi": "error",
+        "semi-spacing": "warn",
+        "semi-style": "warn",
+        "prefer-const": "warn",
+        "keyword-spacing": "warn",
+        "space-before-function-paren": [
+          "warn",
+          {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+          }
+        ],
+        "max-len": [
+          "warn",
+          {
+            "code": 100,
+            "ignoreComments": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+          }
+        ],
+        "indent": [
+          "warn",
+          2,
+          {
+            "SwitchCase": 1,
+            "ArrayExpression": 1,
+            "ObjectExpression": 1,
+            "ignoredNodes": ["JSXAttribute", "JSXSpreadAttribute"]
+          }
+        ],
+        "space-in-parens": ["warn", "never"],
+        "comma-spacing": ["warn", { "before": false, "after": true }],
+        "array-bracket-spacing": ["warn", "never"],
+        "arrow-parens": ["warn", "always"],
+        "object-curly-newline": [
+          "warn",
+          {
+            "multiline": true,
+            "consistent": true
+          }
+        ],
+        "array-bracket-newline": ["warn", "consistent"],
+        "eol-last": ["error", "always"],
+        "no-multiple-empty-lines": ["error"],
+        "operator-linebreak": [
+          "error",
+          "before",
+          { "overrides": { "=": "after" } }
+        ],
+        "quote-props": ["error", "consistent-as-needed"],
+        "generator-star-spacing": ["error", { "before": false, "after": true }],
+        "new-cap": [
+          "error",
+          { "capIsNewExceptionPattern": "[Record | List | Map]" }
+        ],
+        "no-nested-ternary": "off", // ToDo Хорошо бы избавиться от вложенных тернарных операторов.
+        "no-floating-decimal": "off",
+        "prefer-reflect": "off", // This rule was deprecated in ESLint v3.9.0 https://eslint.org/docs/rules/prefer-reflect
+        "radix": ["error", "as-needed"],
+        "max-nested-callbacks": ["error", 6], // ToDo Уменьшить.
+        "max-depth": ["error", 5], // ToDo Уменьшить.
+        "max-params": ["error", 7], // ToDo Уменьшить.
+        "import/namespace": "off",
+        "valid-typeof": "error",
+        "no-sparse-arrays": "error",
+        // TODO: Подключить симлинки
+        // "no-imports/outside-special-folder": [
+        //   "error",
+        //   {
+        //     "directories": [
+        //       "./src/packages/brand",
+        //       "./src/packages/analytics",
+        //       "./src/packages/region"
+        //     ],
+        //     "aliases": [{ "alias": "app", "pathToFolder": "./src" }],
+        //     "ignore": ["./bin/**/*", "./test/mocks/**/*"]
+        //   }
+        // ],
+
+        // TypeScript
+        "@typescript-eslint/semi": ["error"],
+        "@typescript-eslint/no-array-constructor": "warn",
+        "@typescript-eslint/no-namespace": "error",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-useless-constructor": "warn",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/object-curly-spacing": ["error", "always"],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": [
+          "error",
+          { "functions": false, "classes": false }
+        ],
+        "@typescript-eslint/member-delimiter-style": "error",
+
+        // React
+        "react/jsx-one-expression-per-line": "error",
+        "react/jsx-curly-brace-presence": [
+          "error",
+          { "props": "never", "children": "ignore" }
+        ],
+        "react/jsx-boolean-value": "error",
+        "react/jsx-tag-spacing": "warn",
+        "react/jsx-wrap-multilines": [
+          "error",
+          {
+            "declaration": "parens-new-line",
+            "assignment": "parens-new-line",
+            "return": "parens-new-line",
+            "arrow": "parens-new-line",
+            "condition": "parens-new-line",
+            "logical": "parens-new-line",
+            "prop": "parens-new-line"
+          }
+        ],
+        "react/display-name": "off",
+        "react/no-danger": "off",
+        "react/prop-types": "off",
+        "react/default-props-match-prop-types": "off", // https://github.com/yannickcr/eslint-plugin-react/issues/1468
+        "react/jsx-filename-extension": [
+          "error",
+          { "extensions": [".jsx", ".js", ".tsx", ".ts"] }
+        ],
+        "react-hooks/exhaustive-deps": 0,
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/jsx-indent-props": ["error", 2],
+        "react/jsx-indent": [2, 2, { "indentLogicalExpressions": true }],
+        "react/no-access-state-in-setstate": "error",
+        "react/no-direct-mutation-state": "error",
+        "react/no-typos": "error",
+        "react/jsx-key": ["error", { "checkFragmentShorthand": true }],
+        "react/self-closing-comp": ["error", { "component": true }],
+        "react/jsx-closing-bracket-location": "error",
+        "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+        "react/jsx-max-props-per-line": [1, { "maximum": 1 }],
+        "react/sort-comp": "off"
+      }
+    }
+  ]
+}

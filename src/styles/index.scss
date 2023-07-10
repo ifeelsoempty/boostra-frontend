@@ -1,0 +1,26 @@
+@import './typography.variables';
+@import './layout.variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $font-size-2;
+  min-width: $min-container-width;
+}
+
+* {
+  font-family: $font-1, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus {
+  background: inherit;
+}

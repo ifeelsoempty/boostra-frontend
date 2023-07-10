@@ -1,0 +1,42 @@
+@import '../../../styles/layout.variables.scss';
+@import '../../../styles/typography.variables.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 40px auto;
+    min-height: 60px;
+    max-width: $base-container-width;
+
+    @media (max-width: $breakpoint-laptop) { 
+        margin: 40px 20px;
+    }
+
+    @media (max-width: $breakpoint-tablet) { 
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+.fyi {
+    font-size: $font-size-4;
+    line-height: 15px;
+}
+
+.suggestions {
+    @media (max-width: 768px) { 
+        margin-top: 40px;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentMethods {
+    display: flex;
+    gap: 25px;
+}

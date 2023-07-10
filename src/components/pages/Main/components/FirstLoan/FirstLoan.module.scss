@@ -1,0 +1,29 @@
+@import '../../../../../styles/typography.variables.scss';
+@import '../../../../../styles/layout.variables.scss';
+
+$button-background: url('/../public/images/only-logo-cut.png') center center/contain no-repeat, linear-gradient(99.09deg, #ffaf66 0%, #ff8515 100%);
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-basis: 100%;
+    align-items: stretch;
+
+    @media (max-width: $breakpoint-laptop) { 
+        gap: 15px;
+    }
+}
+
+.button {
+    display: flex;
+    padding: 20px;
+    color: $font-color-1;
+    border: none;
+    position: relative;
+    border-radius: 15px;
+    background: $button-background;
+    &:hover, &:focus {
+        background: $button-background;
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../../../styles/typography.variables.scss';
+@import '../../../../styles/palette.variables.scss';
+
+.container {
+    font-weight: bold;
+    margin: 0px;
+}
+
+/* Types */
+
+.default {
+    color: $font-color-1;
+}
+
+.primary {
+    color: $primary-1;
+}
+
+/* sizes */
+
+.h1 {
+    font-size: 36px;
+}
+
+.h2 {
+    font-size: 32px;
+}
+
+.h3 {
+    font-size: 28px;
+}
+
+.h4 {
+    font-size: 24px;
+}
+
+.h5 {
+    font-size: 20px;
+}
+
+.h6 {
+    font-size: 16px;
+}

@@ -1,0 +1,72 @@
+@import '../../../styles/layout.variables.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 15px auto;
+    min-height: 60px;
+    max-width: $base-container-width;
+    
+    @media (max-width: $breakpoint-laptop) {
+        margin: 15px 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contactList {
+    display: flex;
+    gap: 40px;
+
+    @media (max-width: 928px) {
+        width: 50%;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.menu {
+    display: none;
+    
+    @media (max-width: $breakpoint-tablet) {
+        display: block;
+    }
+}
+
+.carDepositBtn{
+    align-self: flex-end;
+
+    @media (max-width: $breakpoint-laptop) {
+        display: none;
+    }
+}
+
+.navbar {
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.pay {
+    @media (max-width: $breakpoint-laptop) {
+        display: none;
+    }
+}

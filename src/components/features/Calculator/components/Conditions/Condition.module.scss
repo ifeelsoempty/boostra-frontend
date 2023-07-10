@@ -1,0 +1,37 @@
+@import '../../../../../styles/palette.variables.scss';
+@import '../../../../../styles/typography.variables.scss';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .title {
+        font-size: $font-size-1
+    }
+
+    .valueContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .value {
+        font-weight: bold;
+    }
+
+    .valueActive {
+        color: #198754;
+    }
+
+    .disabledValue {
+        text-decoration: line-through;
+    }
+}
+
+.widget {
+    background: #0997FF;
+    color: $white-1;
+    font-size: $font-size-4;
+    font-weight: bold;
+}

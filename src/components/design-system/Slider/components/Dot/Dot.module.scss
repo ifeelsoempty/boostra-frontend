@@ -1,0 +1,13 @@
+@import '../../../../../styles/palette.variables.scss';
+
+.default {
+    display: flex;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $black-2;
+}
+
+.active {
+    background: $primary-1;
+}

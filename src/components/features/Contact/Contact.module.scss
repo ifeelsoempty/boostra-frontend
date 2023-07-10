@@ -1,0 +1,14 @@
+@import '../../../styles/typography.variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    display: block;
+}
+
+.info {
+    font-size: $font-size-3;
+} 
